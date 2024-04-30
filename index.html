@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seatwork 2</title>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
+</head>
+
+
+<body>
+    <style>
+
+        body {
+          background-image: url(https://i.pinimg.com/564x/e8/fd/79/e8fd7924e472bbd4520bf62690741bac.jpg);
+
+        }
+        .container {
+            padding: 10px;
+            margin: 10px;
+            border: 4px dashed ;
+        }
+
+        .btn-container button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border: none;
+            text-align: left;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+            text-align: center;
+            clear: both;
+        }
+
+        .btn-product {
+            background-color: #28A541;
+            color: white;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-power {
+            background-color: #FFBE05;
+            color: black;
+        }
+
+        .btn-remainder {
+            background-color: #DC3241;
+            color: white;
+        }
+
+        .btn-check {
+            background-color:#14A0B4;
+            color: black;
+        }
+
+        .image-container img {
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+
+        .input-container {
+            text-align: center;
+        }
+
+        .input-container div {
+            margin-bottom: 10px;
+        }
+
+        .img {
+            margin-right: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body><strong>
+ <div class="image-container">
+ <div class="img">
+     <img src="https://i.pinimg.com/originals/b7/b5/21/b7b521949f74de956e1020f2e3616126.gif" width="400">
+ </div>
+ <div class="container">
+ <div class="input-container">
+ <div>
+
+ <h1><strong>The Powerpuff Girls are here to give you a math challenge!!</strong></h1>
+  <h3>Given:</h3>
+  <label for="inputX1">Enter a value for X:</label>
+  <input type="number" id="inputX1" placeholder="Enter here">
+ </div>
+ <div>
+  <label for="inputY">Enter a value for Y:</label>
+  <input type="number" id="inputY" placeholder="Enter here">
+</div>
+<br />
+</div>
+  <p><i><strong>Click the buttons below to proceed!</strong></i></p>
+</div>
+</div>
+
+<div class="btn-container">
+  <button class="btn-product" onclick="calculateProduct()">Product of X and Y</button>
+  <button class="btn-power" onclick="calculatePower()">X raised to Y</button>
+</div>
+
+<div class="btn-container">
+    <button class="btn-remainder" onclick="calculateRemainder()">Remainder of X and Y</button>
+    <button class="btn-check" onclick="checkEquality()">Check if X is equal to Y</button>
+</div></strong>
+
+    <script>
+        function calculateProduct() {
+            var x1 = parseFloat(document.getElementById('inputX1').value);
+            var y = parseFloat(document.getElementById('inputY').value);
+            var product = x1 * y;
+            alert("Product of X and Y: " + product);
+        }
+
+        function calculatePower() {
+            var x1 = parseFloat(document.getElementById('inputX1').value);
+            var y = parseFloat(document.getElementById('inputY').value);
+            var power = Math.pow(x1, y);
+            alert("X raised to Y: " + power);
+        }
+
+        function calculateRemainder() {
+            var x1 = parseFloat(document.getElementById('inputX1').value);
+            var y = parseFloat(document.getElementById('inputY').value);
+            var remainder = x1 % y;
+            alert("Remainder of X and Y: " + remainder);
+        }
+
+        function checkEquality() {
+            var x1 = parseFloat(document.getElementById('inputX1').value);
+            var y = parseFloat(document.getElementById('inputY').value);
+            if (x1 == y) {
+                alert("X is equal to Y");
+            } else {
+                alert("X is not equal to Y");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
